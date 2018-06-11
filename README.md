@@ -79,7 +79,7 @@ With `q1 - q3` determine, we can use the below formula to derive the required `q
 
 ![alt text][image7]
 
-Basically, `R0_3` can be derived from `T0_3 = T0_1 * T1_2 * T2_3` and evaluted at the just-solved angles `q1, q2, and q3`. R3_6 is the numerical representation of rotation matrix from joint 3 to 6. To derive Euler angles from rotation matrix, I followed the formulas presented in the following [link](https://pdfs.semanticscholar.org/6681/37fa4b875d890f446e689eea1e334bcf6bf6.pdf). 
+Basically, `R0_3` can be derived from `T0_3 = T0_1 * T1_2 * T2_3` and evaluted at the just-solved angles `q1, q2, and q3`. `R3_6 = R3_4[q4] * R4_5[q5] * R5_6[q6]` is the numerical representation of rotation matrix from joint 3 to 6. To derive Euler angles from rotation matrix, I followed the formulas presented in the following [link](https://pdfs.semanticscholar.org/6681/37fa4b875d890f446e689eea1e334bcf6bf6.pdf). 
 
 
 
