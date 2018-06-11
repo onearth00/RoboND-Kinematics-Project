@@ -1,6 +1,18 @@
 ## Project: Kinematics Pick & Place
 ## Ray Tang, 06/10/2018
 ---
+**Goals of the project:**
+
+Goals of the project are to familiarize with the forward and inverse kinematics techniques, code in a python script to control a Kuka KR210 robotic arms, and use it to pick and place objects in a Gazebo simulated environment
+
+**Steps that I took to complete the project:**  
+
+1. Set up the ROS Workspace.
+2. Clone the [project repository](https://github.com/udacity/RoboND-Kinematics-Project) into the ***src*** directory of your ROS Workspace.  
+3. Experiment with the forward_kinematics environment and get familiar with the robot.
+4. Launch in [demo mode](https://classroom.udacity.com/nanodegrees/nd209/parts/7b2fd2d7-e181-401e-977a-6158c77bf816/modules/8855de3f-2897-46c3-a805-628b5ecf045b/lessons/91d017b1-4493-4522-ad52-04a74a01094c/concepts/ae64bb91-e8c4-44c9-adbe-798e8f688193).
+5. Perform Kinematic Analysis for the robot following the [project rubric](https://review.udacity.com/#!/rubrics/972/view).
+6. Fill in the `IK_server.py` with your Inverse Kinematics code. 
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
