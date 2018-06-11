@@ -39,7 +39,7 @@ Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 3->4 |  -pi/2 | -0.054 | 1.5 | q4
 4->5 | pi/2 | 0 | 0 | q5
 5->6 | -pi/2 | 0 | 0 | q6
-6->EE | 0 | 0 | 0.303 | q7
+6->EE | 0 | 0 | 0.303 | 0
 
 #### 3. Create individual transformation matrices at each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose. Mathetically, the eventual homogeneous transform expressed as:
 
@@ -47,21 +47,27 @@ Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 
 where G is short for gripper, T(i)_(i+1) is the transform from link i to (i+1).
 
-#### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
+#### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics (for the WC) and inverse Orientation Kinematics (for the end effector). Through the exercise, all three angles (q1 to q6 in th DH table) shall be determined.
 
-And here's where you can draw out and show your math for the derivation of your theta angles. 
+The first part is to derive position of the wrist center (WC), which is dicated by q1, q2 and q3. 
 
-![alt text][image2]
+
 
 ### Project Implementation
 
 #### 1. Fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Your code must guide the robot to successfully complete 8/10 pick and place cycles. Briefly discuss the code you implemented and your results. 
 
 
-Here I'll talk about the code, what techniques I used, what worked and why, where the implementation might fail and how I might improve it if I were going to pursue this project further.  
-
-
-And just for fun, another example image:
+Here is the initial configuration of the Kuka arm. the blue object is positioned at "5".
 ![alt text][image1]
+
+Here is after the EE reached to the desired position and grabbed the object.
+![alt text][image2]
+
+Here is after the EE reached the desired position for placement.
+![alt text][image3]
+
+Here is after the EE released the object into the bucket.
+![alt text][image4]
 
 
