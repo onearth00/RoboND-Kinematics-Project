@@ -62,13 +62,14 @@ where d = 0.303 is the distance between the gripper and joint 5 (where WC locate
 	    
 where `R_x`, `R_y`, and `R_z`is respectively rotation matrix around `x`, `y`, and `z` axis. `R_z.subs(y, radians(180))*R_y.subs(p, radians(-90))` are required corrections for reconciling the discrepancies between DH and gazebo conventions. `roll, pitch, yaw` are three known variables of the Euler angles of the end effector.
 
-Once WC coordinate is decided, we moved on to solve q4 - q6.
+Once WC coordinate is decided, we moved on to solve q1 - q3, which demands some gymnastics of trigonometry.
 
 
 ### Project Implementation
 
-#### 1. Fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Your code must guide the robot to successfully complete 8/10 pick and place cycles. Briefly discuss the code you implemented and your results. 
+#### 1. I fill in the `IK_server.py` file with properly commented python code for calculating Inverse Kinematics based on previously performed Kinematic Analysis. Critical implementations of the code can be found in the last section. I also tested the code in the `IK_debug.py` and obtained satisfactory results for all three test cases. 
 
+Below are a step-by-step breakdown of executing the `IK_server.py` file in the Gazebo simulator.
 
 Here is the initial configuration of the Kuka arm. the blue object is positioned at "5".
 ![alt text][image1]
