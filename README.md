@@ -27,6 +27,8 @@ Goals of the project are to familiarize with the forward and inverse kinematics 
 [image4]: ./drop.png
 [image5]: ./image-4.png
 [image6]: ./l21-l-inverse-kinematics-new-design-fixed.png 
+[image7]: ./image-5.png
+
 
 ### Kinematic Analysis
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot 
@@ -71,7 +73,10 @@ We can first determine the length of three sides, `A`, `B`, and `C` as:
 
 `C = 1.25, A = sqrt(1.50^2 + 0.054^2), B = sqrt(pow((WC[2]-0.75),2)+pow((sqrt(WC[0]*WC[0] + WC[1]*WC[1]) - 0.35), 2))`
 
-From cosin law, the three angles `a`, `b`, and `c` can be subsequently determined. direct relations can be established between q3 and b, and q2, a, and the angle between B and `x` axi. The explict math can be found in the uploaded `IK_server.py` file. In addition, q1 can be easily determined by `atan2(WC[1],WC[0])`.
+From cosin law, the three angles `a`, `b`, and `c` can be subsequently determined. direct relations can be established between q3 and b, and q2, a, and the angle between B and `x` axis. The explict math can be found in the uploaded `IK_server.py` file. In addition, q1 can be easily determined by `atan2(WC[1],WC[0])`.
+
+![alt text][image7]
+
 
 ### Project Implementation
 
