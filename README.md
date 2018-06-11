@@ -79,6 +79,7 @@ With `q1 - q3` determine, we can use the below formula to derive the required `q
 
 ![alt text][image7]
 
+Basically, `R0_3` can be derived from `T0_3 = T0_1 * T1_2 * T2_3` and evaluted at the just-solved angles `q1, q2, and q3`. R3_6 is the rotation matrix from join 3 to 6 
 
 
 
