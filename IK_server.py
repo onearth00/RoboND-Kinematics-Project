@@ -7,7 +7,8 @@
 #
 # All Rights Reserved.
 
-# Author: Harsh Pandya
+# Original author: Harsh Pandya
+# Modified by Ray Tang 6/10/2018
 
 # import modules
 import rospy
