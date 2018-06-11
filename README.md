@@ -21,9 +21,10 @@ Goals of the project are to familiarize with the forward and inverse kinematics 
 
 [//]: # (Image References)
 
-[image1]: ./misc_images/misc1.png
-[image2]: ./misc_images/misc3.png
-[image3]: ./misc_images/misc2.png
+[image1]: ./initial.png
+[image2]: ./pick.png
+[image3]: ./place.png
+[image4]: ./drop.png
 
 ### Kinematic Analysis
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot 
