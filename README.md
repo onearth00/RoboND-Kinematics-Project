@@ -67,11 +67,9 @@ Once WC coordinate is decided, we moved on to solve q1 - q3, which demands some 
 
 ![alt text][image6]
 
-We can first determine the length of three sides, `sA`, `sB`, and `sC` as:
+We can first determine the length of three sides, `A`, `B`, and `C` as:
 
-`sC = 1.25
-sA = 1.501 #sqrt(1.50^2 + 0.054^2)
-sB = sqrt(pow((WC[2]-0.75),2)+pow((sqrt(WC[0]*WC[0] + WC[1]*WC[1]) - 0.35), 2))`
+`C = 1.25, A = sqrt(1.50^2 + 0.054^2), B = sqrt(pow((WC[2]-0.75),2)+pow((sqrt(WC[0]*WC[0] + WC[1]*WC[1]) - 0.35), 2))`
 
 
 ### Project Implementation
