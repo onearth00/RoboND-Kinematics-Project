@@ -21,7 +21,7 @@ Goals of the project are to familiarize with the forward and inverse kinematics 
 
 [//]: # (Image References)
 
-[image1]: ./initial.png
+[image1]: ./Initial.png
 [image2]: ./pick.png
 [image3]: ./place.png
 [image4]: ./drop.png
