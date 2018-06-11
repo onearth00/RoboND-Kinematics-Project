@@ -49,7 +49,7 @@ Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 
 where G is short for gripper, T(i)_(i+1) is the transform from link i to (i+1).
 
-#### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics (for the WC) and inverse Orientation Kinematics (for the end effector). Through the exercise, all three angles (q1 to q6 in th DH table) shall be determined.
+#### 4. Decouple Inverse Kinematics problem into Inverse Position Kinematics (for the WC) and inverse Orientation Kinematics (for the end effector). Through the exercise, all three angles (q1 to q6 in th DH table) shall be determined.
 
 The first part is to derive position of the wrist center (WC), which dicates q1, q2 and q3. From the formula shown below
 
@@ -63,10 +63,16 @@ where d = 0.303 is the distance between the gripper and joint 5 (where WC locate
 	    
 where `R_x`, `R_y`, and `R_z`is respectively rotation matrix around `x`, `y`, and `z` axis. `R_z.subs(y, radians(180))*R_y.subs(p, radians(-90))` are required corrections for reconciling the discrepancies between DH and gazebo conventions. `roll, pitch, yaw` are three known variables of the Euler angles of the end effector.
 
-Once WC coordinate is decided, we moved on to solve q1 - q3, which demands some gymnastics of trigonometry.
-
+Once WC coordinate is decided, we moved on to solve q1 - q3, which demands some gymnastics of trigonometry as shown in the below figure.
 
 ![alt text][image6]
+
+We can first determine the length of three sides, `sA`, `sB`, and `sC` as:
+
+`sC = 1.25
+sA = 1.501 #sqrt(1.50^2 + 0.054^2)
+sB = sqrt(pow((WC[2]-0.75),2)+pow((sqrt(WC[0]*WC[0] + WC[1]*WC[1]) - 0.35), 2))`
+
 
 ### Project Implementation
 
