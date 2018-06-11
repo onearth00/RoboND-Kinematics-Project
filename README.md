@@ -38,8 +38,7 @@ Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 
 `T0_G = T0_1 * T1_2 * T2_3 * T3_4 * T4_5 * T5_6* T6_G`
 
-where G is short for gripper, T(i)_(i+1) is the transform from link i to (i+1
-
+where G is short for gripper, T(i)_(i+1) is the transform from link i to (i+1).
 
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
 
@@ -56,6 +55,6 @@ Here I'll talk about the code, what techniques I used, what worked and why, wher
 
 
 And just for fun, another example image:
-![alt text][image3]
+![alt text][https://github.com/onearth00/RoboND-Kinematics-Project/blob/master/Screen%20Shot%202018-06-10%20at%208.05.04%20PM.png]
 
 
