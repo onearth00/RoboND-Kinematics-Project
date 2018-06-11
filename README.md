@@ -26,6 +26,7 @@ Goals of the project are to familiarize with the forward and inverse kinematics 
 [image3]: ./place.png
 [image4]: ./drop.png
 [image5]: ./image-4.png
+[image6]: ./l21-l-inverse-kinematics-new-design-fixed.png 
 
 ### Kinematic Analysis
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot 
@@ -64,6 +65,8 @@ where `R_x`, `R_y`, and `R_z`is respectively rotation matrix around `x`, `y`, an
 
 Once WC coordinate is decided, we moved on to solve q1 - q3, which demands some gymnastics of trigonometry.
 
+
+![alt text][image6]
 
 ### Project Implementation
 
