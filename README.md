@@ -25,6 +25,7 @@ Goals of the project are to familiarize with the forward and inverse kinematics 
 [image2]: ./pick.png
 [image3]: ./place.png
 [image4]: ./drop.png
+[image5]: ./image-4.png
 
 ### Kinematic Analysis
 #### 1. Run the forward_kinematics demo and evaluate the kr210.urdf.xacro file to perform kinematic analysis of Kuka KR210 robot 
@@ -49,7 +50,14 @@ where G is short for gripper, T(i)_(i+1) is the transform from link i to (i+1).
 
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics (for the WC) and inverse Orientation Kinematics (for the end effector). Through the exercise, all three angles (q1 to q6 in th DH table) shall be determined.
 
-The first part is to derive position of the wrist center (WC), which is dicated by q1, q2 and q3. 
+The first part is to derive position of the wrist center (WC), which dicates q1, q2 and q3. From the formula shown below
+
+![alt text][image5]
+
+
+R_rpy = R_z*R_y*R_x	#rotation matrix for the end effector
+	    
+	    Rot_corr = R_z.subs(y, radians(180))*R_y.subs(p, radians(-90)) #corrections for the discrepancies between DH and gazebo
 
 
 
