@@ -34,9 +34,11 @@ Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 5->6 | -pi/2 | 0 | 0 | q6
 6->EE | 0 | 0 | 0.303 | q7
 
-create individual transformation matrices about each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose.
+#### 3. Create individual transformation matrices at each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose. Mathetically, the eventual homogeneous transform expressed as:
 
+`T0_G = T0_1 * T1_2 * T2_3 * T3_4 * T4_5 * T5_6* T6_G`
 
+where G is short for gripper, T(i)_(i+1) is the transform from link i to (i+1
 
 
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
