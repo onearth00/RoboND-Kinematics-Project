@@ -57,10 +57,12 @@ The first part is to derive position of the wrist center (WC), which dicates q1,
 
 where d = 0.303 is the distance between the gripper and joint 5 (where WC located). We will further need to determine rotation matrix from base link to joint 6 (`Rot0_6`), which can be mathematically determined by:
 
-`Rot0_6 = R_z * R_y * R_z * R_z.subs(y, radians(180))*R_y.subs(p, radians(-90))` and 
+`Rot0_6 = R_z[r] * R_y[p] * R_z[y] * R_z.subs(y, radians(180))*R_y.subs(p, radians(-90))` and 
 `Rot0_6 = Rot0_6.subs({'r':roll, 'p':pitch, 'y':yaw})`
 	    
 where `R_x`, `R_y`, and `R_z`is respectively rotation matrix around `x`, `y`, and `z` axis. `R_z.subs(y, radians(180))*R_y.subs(p, radians(-90))` are required corrections for reconciling the discrepancies between DH and gazebo conventions. `roll, pitch, yaw` are three known variables of the Euler angles of the end effector.
+
+Once WC coordinate is decided, we moved on to solve q4 - q6.
 
 
 ### Project Implementation
