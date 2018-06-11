@@ -51,7 +51,7 @@ Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 
 where G is short for gripper, T(i)_(i+1) is the transform from link i to (i+1).
 
-#### 4. Decouple Inverse Kinematics problem into Inverse Position Kinematics (for the WC) and inverse Orientation Kinematics (for the end effector). Through the exercise, all three angles (q1 to q6 in th DH table) shall be determined.
+#### 4. Decouple Inverse Kinematics problem into Inverse Position Kinematics (for the WC) and inverse Orientation Kinematics (for the end effector). Through the exercise, all six angles (q1 to q6 in th DH table) shall be determined.
 
 The first part is to derive position of the wrist center (WC), which dicates q1, q2 and q3. From the formula shown below
 
@@ -73,9 +73,9 @@ We can first determine the length of three sides, `A`, `B`, and `C` as:
 
 `C = 1.25, A = sqrt(1.50^2 + 0.054^2), B = sqrt(pow((WC[2]-0.75),2)+pow((sqrt(WC[0]*WC[0] + WC[1]*WC[1]) - 0.35), 2))`
 
-From cosin law, the three angles `a`, `b`, and `c` can be subsequently determined. Direct relations can be established between q3 and b, and q2, `a`, and the angle between B and `x` axis. The explict math may be found in the uploaded `IK_server.py` file. In addition, q1 can be easily determined by `atan2(WC[1],WC[0])`.
+From cosin law, the three angles `a`, `b`, and `c` can be subsequently determined. Direct relations can be further established between q3 and b, and q2, `a`, and the angle between B and `x` axis. The explict math may be found in the uploaded `IK_server.py` file. In addition, q1 can be easily determined by `atan2(WC[1],WC[0])`.
 
-With `q1 - q3` determine, we can use the below formula to derive the required `q4 - q6`:
+With `q1 - q3` determined, we can use the below formula to derive the required `q4 - q6`:
 
 ![alt text][image7]
 
