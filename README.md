@@ -55,6 +55,6 @@ Here I'll talk about the code, what techniques I used, what worked and why, wher
 
 
 And just for fun, another example image:
-![alt text][https://github.com/onearth00/RoboND-Kinematics-Project/blob/master/Screen%20Shot%202018-06-10%20at%208.05.04%20PM.png]
+![alt text][image1]
 
 
