@@ -65,7 +65,7 @@ where d = 0.303 is the distance between the gripper and joint 5 (where WC locate
 	    
 where `R_x`, `R_y`, and `R_z`is respectively rotation matrix around `x`, `y`, and `z` axis. `R_z.subs(y, radians(180))*R_y.subs(p, radians(-90))` are required corrections for reconciling the discrepancies between DH and gazebo conventions. `roll, pitch, yaw` are three known variables of the Euler angles of the end effector.
 
-Once WC coordinate is decided, we moved on to solve q1 - q3, which demands some gymnastics of trigonometry as shown in the below figure.
+Once WC coordinate is decided, we moved on to solve `q1 - q3`, which demands some gymnastics of trigonometry as shown in the below figure.
 
 ![alt text][image6]
 
@@ -73,9 +73,13 @@ We can first determine the length of three sides, `A`, `B`, and `C` as:
 
 `C = 1.25, A = sqrt(1.50^2 + 0.054^2), B = sqrt(pow((WC[2]-0.75),2)+pow((sqrt(WC[0]*WC[0] + WC[1]*WC[1]) - 0.35), 2))`
 
-From cosin law, the three angles `a`, `b`, and `c` can be subsequently determined. direct relations can be established between q3 and b, and q2, a, and the angle between B and `x` axis. The explict math can be found in the uploaded `IK_server.py` file. In addition, q1 can be easily determined by `atan2(WC[1],WC[0])`.
+From cosin law, the three angles `a`, `b`, and `c` can be subsequently determined. Direct relations can be established between q3 and b, and q2, `a`, and the angle between B and `x` axis. The explict math may be found in the uploaded `IK_server.py` file. In addition, q1 can be easily determined by `atan2(WC[1],WC[0])`.
+
+With `q1 - q3` determine, we can use the below formula to derive the required `q4 - q6`:
 
 ![alt text][image7]
+
+
 
 
 ### Project Implementation
