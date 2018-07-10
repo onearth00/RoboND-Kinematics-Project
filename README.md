@@ -45,7 +45,7 @@ Links | alpha(i-1) | a(i-1) | d(i-1) | theta(i)
 5->6 | -pi/2 | 0 | 0 | q6
 6->EE | 0 | 0 | 0.303 | 0
 
-#### 3. Create individual transformation matrices at each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose. Mathetically, the eventual homogeneous transform expressed as:
+#### 3. Create individual transformation matrices at each joint. In addition, also generate a generalized homogeneous transform between base_link and gripper_link using only end-effector(gripper) pose. Mathematically, the eventual homogeneous transform is expressed as:
 
 `T0_G = T0_1 * T1_2 * T2_3 * T3_4 * T4_5 * T5_6* T6_G`
 
